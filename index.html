@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memory Mind</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+input[type="datetime-local"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+        </style>
+  </head>
+  <body>
+    <h1>Memory Mind</h1>
+    <form>
+      <label for="file-upload">Choose file:</label>
+      <input type="file" id="file-upload" name="file-upload"><br><br>
+      <label for="date-time">Date and time:</label>
+      <input type="datetime-local" id="date-time" name="date-time"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+      const form = document.querySelector('form');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const file = document.querySelector('#file-upload').files[0];
+  const dateTime = document.querySelector('#date-time').value;
+  const email = document.querySelector('#email').value;
+  // Save the memory data to the database
+  // Send an email after several days using a scheduler or cron job
+});
+
+    </script>
+  </body>
+</html>
